@@ -2,7 +2,7 @@
 <% @lists.each do |list| %>
   <p>タイトル</p>
   <spen>
-    <%= link_to list.title, "/todolists/#{list.id}" %>
+    <%= link_to list.title, todolist_path(list.id) %>
   </spen>
   <p>画像</p>
   <%= attachment_image_tag list, :image, :fill, 100, 100, format: 'jpeg' %>
